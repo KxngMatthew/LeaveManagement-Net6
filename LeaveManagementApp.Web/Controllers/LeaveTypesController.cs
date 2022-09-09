@@ -10,9 +10,12 @@ using AutoMapper;
 using LeaveManagementApp.Web.Models;
 using LeaveManagementApp.Web.Contracts;
 using LeaveManagementApp.Web.Repositories;
+using Microsoft.AspNetCore.Authorization;
+using LeaveManagementApp.Web.Constants;
 
 namespace LeaveManagementApp.Web.Controllers
 {
+    [Authorize(Roles = Roles.Administrator)]
     public class LeaveTypesController : Controller
     {
         //private readonly ApplicationDbContext _context;
@@ -52,12 +55,13 @@ namespace LeaveManagementApp.Web.Controllers
             return View(leaveTypeVM);
         }
 
+        
         // GET: LeaveTypes/Create
         public IActionResult Create()
         {
             return View();
         }
-
+        
         // POST: LeaveTypes/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -73,7 +77,7 @@ namespace LeaveManagementApp.Web.Controllers
             }
             return View(leaveTypeVM);
         }
-
+        
         // GET: LeaveTypes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -91,7 +95,7 @@ namespace LeaveManagementApp.Web.Controllers
             var leaveTypeVM = _mapper.Map<LeaveTypeVM>(leaveType);
             return View(leaveTypeVM);
         }
-
+        
         // POST: LeaveTypes/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -127,7 +131,7 @@ namespace LeaveManagementApp.Web.Controllers
             return View(leaveTypeVM);
         }
 
-
+        
         // POST: LeaveTypes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

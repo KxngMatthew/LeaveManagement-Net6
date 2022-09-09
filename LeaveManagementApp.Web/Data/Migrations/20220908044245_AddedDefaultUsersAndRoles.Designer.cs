@@ -4,6 +4,7 @@ using LeaveManagementApp.Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LeaveManagementApp.Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220908044245_AddedDefaultUsersAndRoles")]
+    partial class AddedDefaultUsersAndRoles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,41 +108,37 @@ namespace LeaveManagementApp.Web.Data.Migrations
                         {
                             Id = "35c280b6-f6a1-4b66-9b56-8e1b7a479a57",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "437429cf-7c17-4300-bff2-e82e53c53766",
+                            ConcurrencyStamp = "d178c1ba-69f0-4898-9a66-30e4df91ea7f",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "admin@yopmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "System",
                             LastName = "Admin",
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@YOPMAIL.COM",
-                            NormalizedUserName = "ADMIN@YOPMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKYYQvBpnpJ4jJDYK1UlrhVloB1ma0BmgKiTZ6luYvP35f0FTxV6ICIw7X1/g8GgGA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAENTJURTN/sgh7zxtUFLfSMxCY1z3uiPe18OgQrVDlyOu5CJgsTB/E3hIyAY01FtUsg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6a573f44-e7cf-49c1-a862-ad9ab0cbc00a",
-                            TwoFactorEnabled = false,
-                            UserName = "admin@yopmail.com"
+                            SecurityStamp = "f9c4abd9-673b-4006-8413-05a85d5425bd",
+                            TwoFactorEnabled = false
                         },
                         new
                         {
                             Id = "35c290b6-f6a1-4b66-9d56-8e1b7a333a57",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "27a75991-1677-41be-a01b-08a24d40f030",
+                            ConcurrencyStamp = "04d55ea9-5eaa-4aae-a609-6db5d1f84572",
                             DateJoined = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "user@yopmail.com",
-                            EmailConfirmed = true,
+                            EmailConfirmed = false,
                             FirstName = "System",
                             LastName = "User",
                             LockoutEnabled = false,
                             NormalizedEmail = "USER@YOPMAIL.COM",
-                            NormalizedUserName = "USER@YOPMAIL.COM",
-                            PasswordHash = "AQAAAAEAACcQAAAAEJOF1SsNhTKmGF62rqKoD0iYgwvgz6PEJ14dtBHR6MGg3LIPWiF6Y8RisQcaWOgukg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJfUbgslNAb4L4R5/NetIkcgV5s0RimBBfto0dSdJgqFA+JTmhqFF2urKFHq+Gkrwg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8e6976f8-7ee0-4e01-9031-c96a18ced351",
-                            TwoFactorEnabled = false,
-                            UserName = "user@yopmail.com"
+                            SecurityStamp = "bfdfd92d-ad4a-4e0e-ac6b-d97fe27094af",
+                            TwoFactorEnabled = false
                         });
                 });
 
@@ -230,14 +228,14 @@ namespace LeaveManagementApp.Web.Data.Migrations
                         new
                         {
                             Id = "35c786b6-f6a1-4b28-9b58-8e1b7c479a57",
-                            ConcurrencyStamp = "4f0632f8-00cc-4208-a47f-c13624a21c8a",
+                            ConcurrencyStamp = "5179635b-4c14-4a62-9f8d-e51fe5d9db6a",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         },
                         new
                         {
                             Id = "45c576b6-f6a1-4b28-9b58-8e1b7c479b57",
-                            ConcurrencyStamp = "8b6fbe8a-bad0-419d-8749-505ad15536b3",
+                            ConcurrencyStamp = "4ebf3e70-720d-4176-9aa7-1d0a11777652",
                             Name = "User",
                             NormalizedName = "USER"
                         });
