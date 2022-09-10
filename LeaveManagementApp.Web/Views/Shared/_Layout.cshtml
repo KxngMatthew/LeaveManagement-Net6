@@ -33,6 +33,9 @@
                         </li>
                         @if (User.IsInRole(Roles.Administrator))/*"User" is a claims object/principal, given by c# library*/
                         {
+                            <li class="nav-item">
+                            <a class="nav-link text-grey" asp-area="" asp-controller="Employees" asp-action="Index">Employees</a>
+                            </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Leave Management
